@@ -45,6 +45,7 @@ public class ListStudent {
         }
     }
 
+    //Thêm node vào đầu list
     public void addFirst(Student student){
         //Tạo node mới
         Node newNode = new Node(student);
@@ -57,6 +58,7 @@ public class ListStudent {
         }
     }
 
+    //Thêm node vào vị trí bất kỳ
     public void addAfter(String id, Student student){
         Node currentNode = head;
         //Duyệt List
@@ -67,6 +69,21 @@ public class ListStudent {
                 currentNode.next = newNode;
             }
             currentNode = currentNode.next;
+        }
+    }
+
+    //Xóa phần tử ở cuối List
+    public void deleteLast(){
+        if(head == null){
+            System.out.println("Danh sách rỗng, không thể xóa");
+        } else if (head.next == null) {
+            head = null;
+        } else {
+            Node currentNode = head;
+            while (currentNode.next.next != null){
+                currentNode = currentNode.next;
+            }
+            currentNode.next = null;
         }
     }
 }
