@@ -45,5 +45,15 @@ public class ListStudent {
         }
     }
 
-    
+    public void addFirst(Student student){
+        //Tạo node mới
+        Node newNode = new Node(student);
+        //Kiểm tra nếu mà List đang rỗng
+        if(head == null){
+            head = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+    }
 }
