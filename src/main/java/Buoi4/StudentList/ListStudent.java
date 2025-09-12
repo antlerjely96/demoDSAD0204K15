@@ -56,4 +56,17 @@ public class ListStudent {
             head = newNode;
         }
     }
+
+    public void addAfter(String id, Student student){
+        Node currentNode = head;
+        //Duyệt List
+        while (currentNode != null){
+            if(currentNode.data.Id.equals(id)){
+                Node newNode = new Node(student);
+                newNode.next = currentNode.next;
+                currentNode.next = newNode;
+            }
+            currentNode = currentNode.next;
+        }
+    }
 }

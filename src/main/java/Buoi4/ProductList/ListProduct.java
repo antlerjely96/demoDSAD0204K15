@@ -38,4 +38,25 @@ public class ListProduct {
             current = current.next;
         }
     }
+
+    public void addFirst (Product product){
+        Node newNode = new  Node(product);
+        if (head == null){
+            head = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+    }
+    public void addAny(String id, Product product){
+        Node currentNode = head;
+        while (currentNode != null){
+            if (currentNode.data.id.equals(id)){
+                Node newNode = new Node(product);
+                newNode.next = currentNode.next;
+                currentNode.next = newNode;
+            }
+            currentNode = currentNode.next;
+        }
+    }
 }
