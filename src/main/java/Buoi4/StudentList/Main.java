@@ -10,5 +10,8 @@ public class Main {
         listStudent.addNode(new Student("st3", "Student C"));
         //In ra list
         listStudent.displayList();
+        listStudent.deleleById("st2");
+        System.out.println("------------------");
+        listStudent.displayList();
     }
 }

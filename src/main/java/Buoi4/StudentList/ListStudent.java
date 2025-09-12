@@ -97,4 +97,25 @@ public class ListStudent {
             head = head.next;
         }
     }
+
+    //Xóa node bất kỳ (xóa student theo id)
+    public void deleleById(String id){
+        if(head == null){
+            System.out.println("Danh sách rỗng, không thể xóa");
+        } else if(head.data.Id.equals(id)){
+            head = head.next;
+        } else {
+            Node currentNode = head;
+            while (currentNode.next != null && !currentNode.next.data.Id.equals(id)){
+                currentNode = currentNode.next;
+            }
+            if(currentNode.next == null){
+                System.out.println("Không tìm thấy sinh viên cần xóa");
+            } else {
+                currentNode.next = currentNode.next.next;
+            }
+        }
+    }
+
+    
 }
