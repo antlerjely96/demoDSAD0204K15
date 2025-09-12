@@ -86,4 +86,15 @@ public class ListStudent {
             currentNode.next = null;
         }
     }
+
+    //Xóa phần tử ở đầu list
+    public void deleteFirst(){
+        if(head == null){
+            System.out.println("Danh sách rỗng, không thể xóa");
+        } else if (head.next == null) {
+            head = null;
+        } else {
+            head = head.next;
+        }
+    }
 }
