@@ -1,4 +1,4 @@
-package Buoi4;
+package Buoi4.StudentList;
 
 //Định nghĩa 1 node ở trong danh sách
 public class Node {

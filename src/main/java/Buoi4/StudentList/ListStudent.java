@@ -1,4 +1,6 @@
-package Buoi4;
+package Buoi4.StudentList;
+
+import java.util.Objects;
 
 public class ListStudent {
     Node head;
@@ -30,4 +32,18 @@ public class ListStudent {
             currentNode = currentNode.next;
         }
     }
+
+    //In student theo id (tìm kiếm student theo id và in ra)
+    public void displayById(String id){
+        //Duyệt từ đầu list
+        Node currentNode = head;
+        while (currentNode != null){
+            if(currentNode.data.Id.equals(id)){
+                System.out.println(currentNode.data.Id + " - " + currentNode.data.fullName);
+            }
+            currentNode = currentNode.next;
+        }
+    }
+
+    
 }

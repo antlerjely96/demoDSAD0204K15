@@ -1,4 +1,4 @@
-package Buoi4;
+package Buoi4.StudentList;
 
 public class Main {
     public static void main(String[] args) {
