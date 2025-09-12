@@ -117,5 +117,13 @@ public class ListStudent {
         }
     }
 
-    
+    //Đếm số node trong list
+    public void countNode(){
+        int count = 0;
+        Node currentNode = head;
+        while (currentNode != null){
+            count++;
+            currentNode = currentNode.next;
+        }
+    }
 }
